@@ -1,0 +1,1195 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.782.0 (24.11)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Gasto_água_2023\",\"Gasto_copo_2023\",\"Gasto_energia_2023\",\"Gasto_papel_2023\",\"Gasto_toner_2023\",\"Cidades\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_850113c3-1460-4244-8e68-79677417f43d",
+        "fromColumn": "ID_City",
+        "fromTable": "Gasto_toner_2023",
+        "toColumn": "ID_City",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "348f296d-b361-0dc9-3b91-07b81e7bd6ee",
+        "fromColumn": "ID_city",
+        "fromTable": "Gasto_papel_2023",
+        "toColumn": "ID_City",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_786d6190-17a8-4cfd-b922-46bed1b4534a",
+        "fromColumn": "ID_City",
+        "fromTable": "Gasto_água_2023",
+        "toColumn": "ID_City",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_830dff9f-c6a4-4e01-801f-4fee0990d5c7",
+        "fromColumn": "ID_City",
+        "fromTable": "Gasto_copo_2023",
+        "toColumn": "ID_City",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_62fe5bba-5f42-4381-9851-457dcd5bb4b8",
+        "fromColumn": "ID_City",
+        "fromTable": "Gasto_energia_2023",
+        "toColumn": "ID_City",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "fd3201e5-c5d6-4c52-8758-a7b7a38a5b73",
+        "fromColumn": "Date",
+        "fromTable": "Calendar",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_5f983245-d7f0-485c-93a6-f8d9019b08a5"
+      },
+      {
+        "name": "be906b8c-b4aa-7b6f-ac6f-8017ef177471",
+        "fromColumn": "Ano",
+        "fromTable": "Gasto_água_2023",
+        "toColumn": "Date",
+        "toTable": "Calendar"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Gasto_água_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Campus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1a409239-d60b-4b02-85b9-5b118e44b8bc",
+            "sourceColumn": "Campus",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "83ba896b-6244-43ec-8111-6737fb9d7511",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c0563112-48a0-4c62-90b1-04011f227b99",
+            "sourceColumn": "Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade em m³",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5168ef5a-b8db-48d6-b000-394831d08250",
+            "sourceColumn": "Quantidade em m³",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dbe93582-816c-4fd5-b746-56e97176c2db",
+            "sourceColumn": "ID_City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fef77513-0053-4f79-a5f1-03f906a862cd",
+        "partitions": [
+          {
+            "name": "Gasto_água_2023",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_agua.csv\"),[Delimiter=\";\", Columns=18, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade em m³\", Int64.Type}, {\"\", type text}, {\"_1\", type text}, {\"_2\", type text}, {\"_3\", type text}, {\"_4\", type text}, {\"_5\", type text}, {\"_6\", type text}, {\"_7\", type text}, {\"_8\", type text}, {\"_9\", type text}, {\"_10\", type text}, {\"_11\", type text}, {\"_12\", Int64.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"\", \"_1\", \"_2\", \"_3\", \"_4\", \"_5\", \"_6\", \"_7\", \"_8\", \"_9\", \"_10\", \"_11\", \"_12\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"Educaço Física\",\"Educação Física\",Replacer.ReplaceText,{\"Campus\"}),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Replaced Value\", \"Custom\", each if [Cidade] = \"Uberlândia\" then \"UDI\" else if [Cidade] = \"Monte Carmelo\" then \"MOO\" else if [Cidade] = \"Ituiutaba\" then \"IUA\" else \"PMS\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Conditional Column\",{{\"Custom\", \"ID_City\"}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Cidade\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns1\",{\"ID_City\", \"Campus\", \"Ano\", \"Mês\", \"Quantidade em m³\"})",
+                "in",
+                "    #\"Reordered Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Gasto_copo_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Unidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9c1923c7-dbb6-4de7-84fb-0179b8f340c6",
+            "sourceColumn": "Unidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "29ac022d-6c0d-49cb-8b48-fdc15dce4009",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "08ec71a1-9358-4660-af11-41527cb48f1f",
+            "sourceColumn": "Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Tipo de Copo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c7b404ba-3f2f-4fcb-9312-2aa9d9333883",
+            "sourceColumn": "Tipo de Copo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c596714a-e021-45d7-aee2-f723ff33266a",
+            "sourceColumn": "Quantidade",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e72580a5-4f01-4eda-aecc-484bb905719f",
+            "sourceColumn": "ID_City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "8bd57d30-e55e-4736-9ef9-57cd4d39acca",
+        "partitions": [
+          {
+            "name": "Gasto_copo_2023",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_copo.csv\"),[Delimiter=\";\", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Tipo de Copo\", type text}, {\"Quantidade\", Int64.Type}, {\"\", type text}, {\"_1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"_1\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"ço\",\"ção\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"to \",\"tão \",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"so\",\"são\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Licitaçġes\",\"Licitações\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value3\", each ([Tipo de Copo] = \"COPO PLASTICO DESCARTAVEL PARA AGUA  200 ML PACOTE COM 100\" or [Tipo de Copo] = \"COPO PLASTICO DESCARTAVEL PARA CAFÉ 50 ML PACOTE COM 100\")),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Filtered Rows\",{\"\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Removed Columns1\",\"Relaçġes\",\"Relações\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Replaced Value4\", each true),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Filtered Rows1\", \"ID_City\", each if [Cidade] = \"Uberlândia\" then \"UDI\" else if [Cidade] = \"Monte Carmelo\" then \"MOO\" else if [Cidade] = \"Ituiutaba\" then \"IUA\" else \"PMS\"),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Conditional Column\",{\"ID_City\", \"Cidade\", \"Unidade\", \"Ano\", \"Mês\", \"Tipo de Copo\", \"Quantidade\"}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Cidade\"})",
+                "in",
+                "    #\"Removed Columns2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Gasto_energia_2023",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Campus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "93f68000-3a6e-4dda-a222-cbe0f1e302b0",
+            "sourceColumn": "Campus",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7eeecee6-e189-4145-a74e-40b6defc2978",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2f1e4b49-b51f-4537-9372-6034b86df33a",
+            "sourceColumn": "Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade em kWh",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "db9852ea-82d9-4bbf-9de0-d78c46ddb63f",
+            "sourceColumn": "Quantidade em kWh",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aeff18d5-9372-4fe3-b86d-09680c51b040",
+            "sourceColumn": "ID_City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "db68dbd6-8a14-444b-9d95-28cd2245c560",
+        "partitions": [
+          {
+            "name": "Gasto_energia_2023",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_energiaeletrica.csv\"),[Delimiter=\";\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade em kWh\", Int64.Type}}),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Changed Type\", \"Custom\", each if [Cidade] = \"Uberlândia\" then \"UDI\" else if [Cidade] = \"Monte Carmelo\" then \"MOO\" else if [Cidade] = \"Ituiutaba\" then \"IUA\" else \"PMS\"),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Conditional Column\",{\"Custom\", \"Cidade\", \"Campus\", \"Ano\", \"Mês\", \"Quantidade em kWh\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Custom\", \"ID_City\"}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Cidade\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"Educaço Física\",\"Educação Física\",Replacer.ReplaceText,{\"Campus\"})",
+                "in",
+                "    #\"Replaced Value\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Gasto_papel_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Unidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8cffe38a-ec37-4648-a9a4-c6da12e74fb1",
+            "sourceColumn": "Unidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "40887ff1-d1f6-40a9-8788-93c01bee2396",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "932b67b1-49a0-4496-8f04-d7e78058122f",
+            "sourceColumn": "Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0837ab57-cb44-49e8-9d05-c471c7903ed9",
+            "sourceColumn": "Quantidade",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID_city",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a926108c-393f-4776-aee6-8676d1347ffa",
+            "sourceColumn": "ID_city",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5cc75683-cd03-40bf-a325-dbd5ce280b61",
+        "partitions": [
+          {
+            "name": "Gasto_papel_2023",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_papel.csv\"),[Delimiter=\";\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade\", Int64.Type}, {\"\", type text}, {\"_1\", type text}}),",
+                "    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Changed Type\", {\"Ano\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Errors\",\"to\",\"tão \",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"ço\",\"ção \",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"so\",\"são\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Licitaçġes\",\"Licitações\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value3\", each true),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows\",{\"\", \"_1\"}),",
+                "    #\"Added Conditional Column\" = Table.AddColumn(#\"Removed Columns\", \"ID_city\", each if [Cidade] = \"Uberlândia\" then \"UDI\" else if [Cidade] = \"Monte carmelo\" then \"MOO\" else if [Cidade] = \"Ituiutaba\" then \"IUA\" else \"PMS\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added Conditional Column\",{{\"ID_city\", \"ID_city(V1)\"}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Cidade\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns1\",{\"ID_city(V1)\", \"Unidade\", \"Ano\", \"Mês\", \"Quantidade\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"ID_city(V1)\", \"ID_city\"}})",
+                "in",
+                "    #\"Renamed Columns1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Gasto_toner_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bb8079dc-c7c0-4d9a-9f10-415f638febe4",
+            "sourceColumn": "ID_City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Unidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1917db1c-a85a-455f-aeb7-6dd1f741afda",
+            "sourceColumn": "Unidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2d8284e9-e181-4c5d-8773-3ef5acf3821a",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e444019d-6a7d-4e3b-aba7-1873d6b374fe",
+            "sourceColumn": "Mês",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "270ea0d3-0584-4556-a532-948ab0377425",
+            "sourceColumn": "Quantidade",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e272e1e9-b608-4595-862a-8f8dc916a0e9",
+        "partitions": [
+          {
+            "name": "Gasto_toner_2023",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_toner.csv\"),[Delimiter=\";\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade\", Int64.Type}}),",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Changed Type\", \"Cidade\", \"Cidade - Copy\"),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Duplicated Column\",\"Uberlândia\",\"UDI\",Replacer.ReplaceText,{\"Cidade\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Monte Carmelo\",\"MOO\",Replacer.ReplaceText,{\"Cidade\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Patos de Minas\",\"PMS\",Replacer.ReplaceText,{\"Cidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Ituiutaba\",\"IUA\",Replacer.ReplaceText,{\"Cidade\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Replaced Value3\",{{\"Cidade\", \"ID_City\"}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Cidade - Copy\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cidades",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1c373f8a-6b31-4e5b-8ed3-f08f02136e30",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ID_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1e9ad0ee-658b-433a-8104-83e8b45b996b",
+            "sourceColumn": "ID_City",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "5fc29796-9516-461f-9058-44d3e8d869c0",
+        "partitions": [
+          {
+            "name": "Cidades",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\2.Studies\\Projetos\\SUSTENTABILIDADE UFU\\dataset\\basedados_2023_papel.csv\"),[Delimiter=\";\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade\", Int64.Type}, {\"\", type text}, {\"_1\", type text}}),",
+                "    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Changed Type\", {\"Ano\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Errors\",\"to\",\"tão \",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"ço\",\"ção \",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"so\",\"são\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Licitaçġes\",\"Licitações\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value3\", each true),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows\",{\"Unidade\", \"Ano\", \"Mês\", \"Quantidade\", \"\", \"_1\"}),",
+                "    #\"Removed Duplicates\" = Table.Distinct(#\"Removed Columns\"),",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Removed Duplicates\", \"Cidade\", \"Cidade - Copy\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Duplicated Column\",{{\"Cidade - Copy\", \"ID_City\"}}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Renamed Columns\",\"Uberlândia\",\"UDI\",Replacer.ReplaceText,{\"ID_City\"}),",
+                "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"Monte Carmelo\",\"MOO\",Replacer.ReplaceText,{\"ID_City\"}),",
+                "    #\"Replaced Value6\" = Table.ReplaceValue(#\"Replaced Value5\",\"Patos de Minas\",\"SNPD\",Replacer.ReplaceText,{\"ID_City\"}),",
+                "    #\"Replaced Value7\" = Table.ReplaceValue(#\"Replaced Value6\",\"Ituiutaba\",\"IUA\",Replacer.ReplaceText,{\"ID_City\"}),",
+                "    #\"Replaced Value8\" = Table.ReplaceValue(#\"Replaced Value7\",\"SNPD\",\"PMS\",Replacer.ReplaceText,{\"ID_City\"})",
+                "in",
+                "    #\"Replaced Value8\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "ab644fbea70f46d8a938f4b3b41d0965"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "cb6384ef-ddd1-49df-9ca7-a7534dfa39ac",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_5f983245-d7f0-485c-93a6-f8d9019b08a5"
+                },
+                "isDefault": true,
+                "relationship": "fd3201e5-c5d6-4c52-8758-a7b7a38a5b73"
+              }
+            ]
+          }
+        ],
+        "lineageTag": "eaeafec2-5af1-4fa0-bd45-57a3903e8b27",
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "expression": "CALENDAR(DATE(2022,12,31),DATE(2023,01,01))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_02e7815c-afbb-4db0-80d3-9f26360fb5e9",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "2d14a0ed-0456-4402-91e8-c7a965d2b455",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d203728b-b4f2-4e5a-af76-ea3dba7bc76c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "de0e9758-e612-487a-a7be-857c91fc62b0",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "ec0483aa-b864-45f1-8317-49994229659e",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "6c79b29b-0652-474b-8322-2b7f5c85199e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "818b926e-556c-44df-9497-9bf0d9cdad3f",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "b8fa62e5-3d1f-4437-87a2-d6b658ab702c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "1720188f-4667-442e-b2bc-2dbd3312d8f2",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "82c99e77-19c3-49a5-96ec-43dd62fb525a",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "3056ca7b-736e-44d5-9099-344d739327de",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "ba4029bd-eebd-4bb8-9e2b-47df293de7e2",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "cf8c9741-c6dd-4d2f-a1e5-4bae0fbe5b59"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "d3d6c8c1-c24f-4a22-9a12-adf883dcde42",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_02e7815c-afbb-4db0-80d3-9f26360fb5e9",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_5f983245-d7f0-485c-93a6-f8d9019b08a5",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "cd7739eb-43b7-4a2b-a0ae-4d7695e048f8",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d17718cb-f842-41a4-8262-53695efbdb55",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "91ac68d9-7e0f-40cb-9f8b-69a39235e5aa",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "3eb758d0-4c2f-4b88-962d-5c47f7da8bb6",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "ca76fe32-a2fb-4cef-90d3-5be7327250a2",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "60bf45b9-4874-46f2-91bd-60dbe35b9590",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "8093c882-5192-4cea-9925-feb9f128bee9",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "590f13e6-afa0-4bcf-8776-4047c800d0b1",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "46b23b27-5ce1-4657-b04a-4dfe85392201",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "54eb500a-fd61-41be-ae5b-e1092066a57d",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "391a4ad2-0545-46a3-9931-6193b26a6a52",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "8fd8f01b-421b-4494-b7c0-e76223d3b0c8"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "ba2d38de-e8bc-4ada-bd5c-2d1f0894374d",
+        "partitions": [
+          {
+            "name": "LocalDateTable_5f983245-d7f0-485c-93a6-f8d9019b08a5",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Calendar'[Date])), 1, 1), Date(Year(MAX('Calendar'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      }
+    ]
+  }
+}

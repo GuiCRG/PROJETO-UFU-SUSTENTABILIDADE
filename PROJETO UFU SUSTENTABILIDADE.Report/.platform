@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "PROJETO UFU SUSTENTABILIDADE"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8658dfb3-3a17-47cf-8d99-f520db497c94"
+  }
+}
