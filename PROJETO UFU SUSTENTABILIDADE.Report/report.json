@@ -25,7 +25,26 @@
       "filters": "[]",
       "height": 720.00,
       "name": "2b85bd0ac00e99131467",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"41cf5825c82eb006c072\",\"layouts\":[{\"id\":0,\"position\":{\"x\":147.80856423173802,\"y\":258.43828715365237,\"z\":0,\"width\":1081.8136020151132,\"height\":423.4760705289672,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"Cidades.Cidade\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(Água_recurso_2022_2023.Quantidade em m³)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Cidades\",\"Type\":0},{\"Name\":\"á\",\"Entity\":\"Água_recurso_2022_2023\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cidade\"},\"Name\":\"Cidades.Cidade\",\"NativeReferenceName\":\"Cidade\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"á\"}},\"Property\":\"Quantidade em m³\"}},\"Function\":0},\"Name\":\"Sum(Água_recurso_2022_2023.Quantidade em m³)\",\"NativeReferenceName\":\"Sum of Quantidade em m³\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 423.48,
+          "width": 1081.81,
+          "x": 147.81,
+          "y": 258.44,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"f9a462a11a4e3a51e954\",\"layouts\":[{\"id\":0,\"position\":{\"x\":147.80856423173802,\"y\":138.74055415617127,\"z\":1,\"width\":1081.8136020151132,\"height\":119.6977329974811,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Calendário.Ano\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calendário\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Ano\"},\"Name\":\"Calendário.Ano\",\"NativeReferenceName\":\"Ano\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 119.70,
+          "width": 1081.81,
+          "x": 147.81,
+          "y": 138.74,
+          "z": 1.00
+        }
+      ],
       "width": 1280.00
     }
   ]

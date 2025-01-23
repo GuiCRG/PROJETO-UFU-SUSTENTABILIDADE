@@ -10,37 +10,24 @@
       "nodes": [
         {
           "location": {
-            "x": 353.43223158983841,
+            "x": 1224.3206106314503,
+            "y": 296.95688044820713
+          },
+          "nodeIndex": "Cidades",
+          "nodeLineageTag": "5fc29796-9516-461f-9058-44d3e8d869c0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1616.4760787376972,
             "y": 0
           },
-          "nodeIndex": "Gasto_água_2023",
-          "nodeLineageTag": "fef77513-0053-4f79-a5f1-03f906a862cd",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 357.82295418202244,
-            "y": 431.060439936639
-          },
-          "nodeIndex": "Gasto_copo_2023",
-          "nodeLineageTag": "8bd57d30-e55e-4736-9ef9-57cd4d39acca",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 356.0561659446995,
-            "y": 209.1233188939909
-          },
-          "nodeIndex": "Gasto_energia_2023",
-          "nodeLineageTag": "db68dbd6-8a14-444b-9d95-28cd2245c560",
+          "nodeIndex": "Água_recurso_2022_2023",
+          "nodeLineageTag": "cde76a96-d929-4b95-90c5-11ed05949189",
           "size": {
             "height": 200,
             "width": 234
@@ -49,59 +36,33 @@
         },
         {
           "location": {
-            "x": 608.37790061636554,
-            "y": 205.89438112325325
+            "x": 703.733832921865,
+            "y": 0
           },
-          "nodeIndex": "Gasto_toner_2023",
-          "nodeLineageTag": "e272e1e9-b608-4595-862a-8f8dc916a0e9",
+          "nodeIndex": "Copo_recurso_2022_2023",
+          "nodeLineageTag": "b6722fc1-2f13-4214-89b7-702cb1d8c9b1",
           "size": {
-            "height": 200,
+            "height": 224,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 606.71062229262338,
-            "y": 429.10256439516371
+            "x": 1167.2340490945205,
+            "y": 626.62076060894992
           },
-          "nodeIndex": "Gasto_papel_2023",
-          "nodeLineageTag": "5cc75683-cd03-40bf-a325-dbd5ce280b61",
+          "nodeIndex": "Calendário",
+          "nodeLineageTag": "3ea63130-83ab-4fd7-83fd-6b100bc603a7",
           "size": {
-            "height": 248,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 985,
-            "y": 255.25
-          },
-          "nodeIndex": "Cidades",
-          "nodeLineageTag": "5fc29796-9516-461f-9058-44d3e8d869c0",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 338.2597674942354
-          },
-          "nodeIndex": "Calendar",
-          "nodeLineageTag": "eaeafec2-5af1-4fa0-bd45-57a3903e8b27",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 6
+          "zIndex": 4
         }
       ],
       "name": "All tables",
-      "zoomValue": 79.55318203769977,
+      "zoomValue": 61,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
