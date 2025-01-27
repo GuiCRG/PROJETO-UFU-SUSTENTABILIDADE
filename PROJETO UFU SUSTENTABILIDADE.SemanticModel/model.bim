@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Cidades\",\"Água_recurso_2022_2023\",\"Copo_recurso_2022_2023\",\"sustentabilidade_-_copo_descartavel_2022\",\"Calendário\"]"
+        "value": "[\"Cidades\",\"Água_recurso_2022_2023\",\"Copo_recurso_2022_2023\",\"0_sustentabilidade_-_copo_descartavel_2022\",\"Anos\",\"Energia_recurso_2022_2023\",\"0_sustentabilidade_-_consumo_de_energia_eletrica_2022\",\"0_basedados_2023_papel\",\"Papel_recurso_2022_2023\",\"0_basedados_2023_toner\",\"Toner_recurso_2022_2023\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -39,7 +39,7 @@
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
     "expressions": [
       {
-        "name": "sustentabilidade_-_copo_descartavel_2022",
+        "name": "0_sustentabilidade_-_copo_descartavel_2022",
         "annotations": [
           {
             "name": "PBI_NavigationStepName",
@@ -61,6 +61,100 @@
         ],
         "kind": "m",
         "lineageTag": "1087818e-7080-4821-a3cc-bf6a084755cc"
+      },
+      {
+        "name": "0_sustentabilidade_-_consumo_de_energia_eletrica_2022",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\sustentabilidade_-_consumo_de_energia_eletrica_2022.csv\"),[Delimiter=\";\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus/Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mes\", type text}, {\"Quantidade (kWh)\", Int64.Type}}),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Campus/Unidade\", \"Campus\"}, {\"Mes\", \"Mês\"}})",
+          "in",
+          "    #\"Renamed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "99b45266-2f70-4634-b5bb-eaff215810ff"
+      },
+      {
+        "name": "0_basedados_2023_papel",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\basedados_2023_papel.csv\"),[Delimiter=\";\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade\", Int64.Type}, {\"\", type text}, {\"_1\", type text}}),",
+          "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"_1\", \"\"}),",
+          "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Quantidade\", \"Quantidade (resmas)\"}}),",
+          "    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Renamed Columns\", {\"Ano\"})",
+          "in",
+          "    #\"Removed Errors\""
+        ],
+        "kind": "m",
+        "lineageTag": "9e52b03a-d7ab-4da1-893f-79501710b6e7"
+      },
+      {
+        "name": "0_basedados_2023_toner",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\basedados_2023_toner.csv\"),[Delimiter=\";\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade\", Int64.Type}})",
+          "in",
+          "    #\"Changed Type\""
+        ],
+        "kind": "m",
+        "lineageTag": "618001ea-ef12-4a62-9886-4e7e02e49678"
+      }
+    ],
+    "queryGroups": [
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ],
+        "description": "All dates in year and months",
+        "folder": "Calendar"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "folder": "Trated Queries"
       }
     ],
     "relationships": [
@@ -83,14 +177,91 @@
         "fromColumn": "Ano",
         "fromTable": "Copo_recurso_2022_2023",
         "toColumn": "Ano",
-        "toTable": "Calendário"
+        "toTable": "Anos"
       },
       {
         "name": "bd82122e-0fc5-4555-f372-46f5729804bb",
         "fromColumn": "Ano",
         "fromTable": "Água_recurso_2022_2023",
         "toColumn": "Ano",
-        "toTable": "Calendário"
+        "toTable": "Anos"
+      },
+      {
+        "name": "AutoDetected_3b9f05f9-6e03-4fee-807b-d35eb02f0162",
+        "fromColumn": "Cidade",
+        "fromTable": "Energia_recurso_2022_2023",
+        "toColumn": "Cidade",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_8e59ca45-bd99-4f6b-bfff-01db4ec0de81",
+        "fromColumn": "Cidade",
+        "fromTable": "Papel_recurso_2022_2023",
+        "toColumn": "Cidade",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_c8c546c0-4681-4f0f-ae75-d87d2fd844ca",
+        "fromColumn": "Cidade",
+        "fromTable": "Toner_recurso_2022_2023",
+        "toColumn": "Cidade",
+        "toTable": "Cidades"
+      },
+      {
+        "name": "AutoDetected_905a2175-7693-4491-8874-bb65b3770e2a",
+        "fromColumn": "Ano",
+        "fromTable": "Energia_recurso_2022_2023",
+        "toColumn": "Ano",
+        "toTable": "Anos"
+      },
+      {
+        "name": "AutoDetected_ff0a3803-6667-4ed8-97de-6dd1292c2e9f",
+        "fromColumn": "Ano",
+        "fromTable": "Papel_recurso_2022_2023",
+        "toColumn": "Ano",
+        "toTable": "Anos"
+      },
+      {
+        "name": "AutoDetected_2c2ba9e2-50cf-4fd4-b21d-471009e9c65b",
+        "fromColumn": "Ano",
+        "fromTable": "Toner_recurso_2022_2023",
+        "toColumn": "Ano",
+        "toTable": "Anos"
+      },
+      {
+        "name": "5c70a68e-ba47-c23c-783d-ae86b00a6cc9",
+        "fromColumn": "NumberMonth",
+        "fromTable": "Água_recurso_2022_2023",
+        "toColumn": "Value",
+        "toTable": "TabelaMeses"
+      },
+      {
+        "name": "1b13483a-b3e6-06f5-348e-df7d9a03c34f",
+        "fromColumn": "NumberMonth",
+        "fromTable": "Toner_recurso_2022_2023",
+        "toColumn": "Value",
+        "toTable": "TabelaMeses"
+      },
+      {
+        "name": "2e9fc827-ab58-144b-90d0-53def5549f23",
+        "fromColumn": "NumberMonth",
+        "fromTable": "Papel_recurso_2022_2023",
+        "toColumn": "Value",
+        "toTable": "TabelaMeses"
+      },
+      {
+        "name": "afcafbc8-5928-5d58-5229-38ab961a9d9d",
+        "fromColumn": "NumberMonth",
+        "fromTable": "Energia_recurso_2022_2023",
+        "toColumn": "Value",
+        "toTable": "TabelaMeses"
+      },
+      {
+        "name": "f20ef834-218f-22a5-b16a-ffd0f5293062",
+        "fromColumn": "NumberMonth",
+        "fromTable": "Copo_recurso_2022_2023",
+        "toColumn": "Value",
+        "toTable": "TabelaMeses"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -175,6 +346,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -205,29 +380,11 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Mês",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "cdb1100e-3cdd-4a92-a3a5-1416576eb5ab",
-            "sourceColumn": "Mês",
-            "summarizeBy": "none"
-          },
-          {
             "name": "Ano",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
                 "value": "Automatic"
-              }
-            ],
-            "changedProperties": [
-              {
-                "property": "DataType"
               }
             ],
             "dataType": "int64",
@@ -249,6 +406,19 @@
             "lineageTag": "074777d3-6237-479b-8bbb-dfed1120169f",
             "sourceColumn": "Quantidade em m³",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "NumberMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b785dd64-4181-4fd1-a55c-62c84dd69f54",
+            "sourceColumn": "NumberMonth",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "cde76a96-d929-4b95-90c5-11ed05949189",
@@ -256,14 +426,21 @@
           {
             "name": "Água_recurso_2022_2023",
             "mode": "import",
+            "queryGroup": "Trated Queries",
             "source": {
               "expression": [
                 "let",
                 "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\Água_recurso_2022_2023.csv\"),[Delimiter=\",\", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus/Unidade\", type text}, {\"Mês\", type text}, {\"Ano\", Int64.Type}, {\"Quantidade em m³\", Int64.Type}})",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus/Unidade\", type text}, {\"Mês\", type text}, {\"Ano\", Int64.Type}, {\"Quantidade em m³\", Int64.Type}}),",
+                "    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"Campus/Unidade\", Order.Ascending}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Sorted Rows\",\"Educaç?o\",\"Educação\",Replacer.ReplaceText,{\"Campus/Unidade\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Value\", \"NumberMonth\", each if [Mês] = \"Janeiro\" then 1 else if [Mês] = \"Fevereiro\" then 2 else if [Mês] = \"Março\" then 3 else if [Mês] = \"Abril\" then 4 else if [Mês] = \"Maio\" then 5 else if [Mês] = \"Junho\" then 6 else if [Mês] = \"Julho\" then 7 else if [Mês] = \"Agosto\" then 8 else if [Mês] = \"Setembro\" then 9 else if [Mês] = \"Outubro\" then 10 else if [Mês] = \"Novembro\" then 11 else if [Mês] = \"Dezembro\" then 12 else null),",
+                "    #\"Sorted Rows1\" = Table.Sort(#\"Added Custom\",{{\"NumberMonth\", Order.Ascending}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Sorted Rows1\",{\"Mês\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Removed Columns\",\"Gloria\",\"Glória\",Replacer.ReplaceText,{\"Campus/Unidade\"})",
                 "in",
-                "    #\"Changed Type\""
+                "    #\"Replaced Value1\""
               ],
               "type": "m"
             }
@@ -324,19 +501,6 @@
             "summarizeBy": "none"
           },
           {
-            "name": "Mês",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              }
-            ],
-            "dataType": "string",
-            "lineageTag": "5add333d-31c1-42b1-a3f9-b403e43872cf",
-            "sourceColumn": "Mês",
-            "summarizeBy": "none"
-          },
-          {
             "name": "Tipo de Copo",
             "annotations": [
               {
@@ -362,6 +526,19 @@
             "lineageTag": "ed946876-d2a0-4719-bd60-b7479610d7ac",
             "sourceColumn": "Pacote (100 un.)",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "NumberMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b18556a7-6387-4c2b-9b71-2a0d759d98af",
+            "sourceColumn": "NumberMonth",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "b6722fc1-2f13-4214-89b7-702cb1d8c9b1",
@@ -369,6 +546,7 @@
           {
             "name": "Copo_recurso_2022_2023",
             "mode": "import",
+            "queryGroup": "Trated Queries",
             "source": {
               "expression": [
                 "let",
@@ -378,11 +556,32 @@
                 "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"\", \"_1\"}),",
                 "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Quantidade\", \"Pacote (100 un.)\"}}),",
                 "    #\"Filtered Rows\" = Table.SelectRows(#\"Renamed Columns\", each ([Tipo de Copo] = \"COPO PLASTICO DESCARTAVEL PARA AGUA  200 ML PACOTE COM 100\" or [Tipo de Copo] = \"COPO PLASTICO DESCARTAVEL PARA CAFÉ 50 ML PACOTE COM 100\")),",
-                "    #\"Appended Query\" = Table.Combine({#\"Filtered Rows\", #\"sustentabilidade_-_copo_descartavel_2022\"}),",
+                "    #\"Appended Query\" = Table.Combine({#\"Filtered Rows\", #\"0_sustentabilidade_-_copo_descartavel_2022\"}),",
                 "    #\"Replaced Value\" = Table.ReplaceValue(#\"Appended Query\",\"COPO PLASTICO DESCARTAVEL PARA AGUA  200 ML PACOTE COM 100\",\"Copo Descartável 200 ml\",Replacer.ReplaceText,{\"Tipo de Copo\"}),",
-                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"COPO PLASTICO DESCARTAVEL PARA CAFÉ 50 ML PACOTE COM 100\",\"Copo Descartável 50 ml\",Replacer.ReplaceText,{\"Tipo de Copo\"})",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"COPO PLASTICO DESCARTAVEL PARA CAFÉ 50 ML PACOTE COM 100\",\"Copo Descartável 50 ml\",Replacer.ReplaceText,{\"Tipo de Copo\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Gesto\",\"Gestão\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Graduaço\",\"Graduação\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"ço\",\"ção\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"Comisso\",\"Comissão\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value6\" = Table.ReplaceValue(#\"Replaced Value5\",\"Licitaçġes\",\"Licitações\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Trimmed Text\" = Table.TransformColumns(#\"Replaced Value6\",{{\"Mês\", Text.Trim, type text}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Trimmed Text\", \"NumberMonth\", each if [Mês] = \"Janeiro\" then 1",
+                "else if [Mês] = \"Fevereiro\" then 2",
+                "else if [Mês] = \"Março\" then 3",
+                "else if [Mês] = \"Abril\" then 4",
+                "else if [Mês] = \"Maio\" then 5",
+                "else if [Mês] = \"Junho\" then 6",
+                "else if [Mês] = \"Julho\" then 7",
+                "else if [Mês] = \"Agosto\" then 8",
+                "else if [Mês] = \"Setembro\" then 9",
+                "else if [Mês] = \"Outubro\" then 10",
+                "else if [Mês] = \"Novembro\" then 11",
+                "else if [Mês] = \"Dezembro\" then 12",
+                "else null),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Cidade\", \"Unidade\", \"NumberMonth\", \"Mês\", \"Ano\", \"Tipo de Copo\", \"Pacote (100 un.)\"}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Mês\"})",
                 "in",
-                "    #\"Replaced Value1\""
+                "    #\"Removed Columns1\""
               ],
               "type": "m"
             }
@@ -390,7 +589,7 @@
         ]
       },
       {
-        "name": "Calendário",
+        "name": "Anos",
         "annotations": [
           {
             "name": "PBI_NavigationStepName",
@@ -420,18 +619,477 @@
         "lineageTag": "3ea63130-83ab-4fd7-83fd-6b100bc603a7",
         "partitions": [
           {
-            "name": "Calendário",
+            "name": "Anos",
             "mode": "import",
+            "queryGroup": "Calendar",
             "source": {
               "expression": [
                 "let",
                 "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMjIwMlKK1QEzjJViYwE=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", Int64.Type}}),",
-                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Column1\", \"Ano\"}})",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Column1\", \"Ano\"}}),",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Renamed Columns\", \"Ano\", \"Ano - Copy\"),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Duplicated Column\",{\"Ano - Copy\"})",
                 "in",
-                "    #\"Renamed Columns\""
+                "    #\"Removed Columns\""
               ],
               "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Energia_recurso_2022_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e2384927-35de-4a5e-b423-183c400532ab",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Campus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d7f99e03-5fa4-4ca3-ae88-b299368ac82a",
+            "sourceColumn": "Campus",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a7ec3a06-02e2-4fd7-84ae-9873c76f4053",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade (kWh)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "268ad055-6c30-48d2-ab19-bd6c66d7475d",
+            "sourceColumn": "Quantidade (kWh)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NumberMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f9f5ff8b-c7ac-45dd-9fd6-6f0bc87886ae",
+            "sourceColumn": "NumberMonth",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "723c4244-b2e2-468c-ada0-bcd87220b465",
+        "partitions": [
+          {
+            "name": "Energia_recurso_2022_2023",
+            "mode": "import",
+            "queryGroup": "Trated Queries",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\basedados_2023_energiaeletrica.csv\"),[Delimiter=\";\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Campus\", type text}, {\"Ano\", Int64.Type}, {\"Mês\", type text}, {\"Quantidade em kWh\", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Quantidade em kWh\", \"Quantidade (kWh)\"}}),",
+                "    #\"Appended Query\" = Table.Combine({#\"Renamed Columns\", #\"0_sustentabilidade_-_consumo_de_energia_eletrica_2022\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Appended Query\",\"ço\",\"ção\",Replacer.ReplaceText,{\"Campus\"}),",
+                "    #\"Trimmed Text\" = Table.TransformColumns(#\"Replaced Value\",{{\"Mês\", Text.Trim, type text}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Trimmed Text\", \"NumberMonth\", each if [Mês] = \"Janeiro\" then 1",
+                "else if [Mês] = \"Fevereiro\" then 2",
+                "else if [Mês] = \"Março\" then 3",
+                "else if [Mês] = \"Abril\" then 4",
+                "else if [Mês] = \"Maio\" then 5",
+                "else if [Mês] = \"Junho\" then 6",
+                "else if [Mês] = \"Julho\" then 7",
+                "else if [Mês] = \"Agosto\" then 8",
+                "else if [Mês] = \"Setembro\" then 9",
+                "else if [Mês] = \"Outubro\" then 10",
+                "else if [Mês] = \"Novembro\" then 11",
+                "else if [Mês] = \"Dezembro\" then 12",
+                "else null),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Cidade\", \"Campus\", \"Ano\", \"NumberMonth\", \"Mês\", \"Quantidade (kWh)\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Mês\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Papel_recurso_2022_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56c11110-ed78-44b8-bb26-56a3266b18ee",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Unidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e20f24f1-4882-418d-8348-bc16eb9ea52c",
+            "sourceColumn": "Unidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Tipo de Material",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fcd6e0fe-c612-4cda-b1a2-a1d73e636915",
+            "sourceColumn": "Tipo de Material",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eaf4d383-f9c6-41eb-b936-454a71a94c43",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade (resmas)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1263eb78-aa31-448a-a848-5a1201a50364",
+            "sourceColumn": "Quantidade (resmas)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NumberMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "408f561a-2041-4afb-8b7d-624b281fcba2",
+            "sourceColumn": "NumberMonth",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2bc1a009-97da-40bd-983d-74d1b4867559",
+        "partitions": [
+          {
+            "name": "Papel_recurso_2022_2023",
+            "mode": "import",
+            "queryGroup": "Trated Queries",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\sustentabilidade_-_papel_2022.csv\"),[Delimiter=\";\", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Tipo de Material\", type text}, {\"Ano\", Int64.Type}, {\"Mes\", type text}, {\"Quantidade (resmas)\", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Mes\", \"Mês\"}}),",
+                "    #\"Appended Query\" = Table.Combine({#\"Renamed Columns\", #\"0_basedados_2023_papel\"}),",
+                "    #\"Filled Down\" = Table.FillDown(#\"Appended Query\",{\"Tipo de Material\"}),",
+                "    #\"Sorted Rows\" = Table.Sort(#\"Filled Down\",{{\"Unidade\", Order.Ascending}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Sorted Rows\",\"Gesto\",\"Gestão\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Graduaço\",\"Gradução\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"ço\",\"ção\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Comisso\",\"Comissão\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Sorted Rows1\" = Table.Sort(#\"Replaced Value3\",{{\"Unidade\", Order.Descending}}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Sorted Rows1\",\"Diviso\",\"Divisão\",Replacer.ReplaceText,{\"Unidade\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value4\", each true),",
+                "    #\"Trimmed Text\" = Table.TransformColumns(#\"Filtered Rows\",{{\"Mês\", Text.Trim, type text}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Trimmed Text\", \"NumberMonth\", each if [Mês] = \"Janeiro\" then 1",
+                "else if [Mês] = \"Fevereiro\" then 2",
+                "else if [Mês] = \"Março\" then 3",
+                "else if [Mês] = \"Abril\" then 4",
+                "else if [Mês] = \"Maio\" then 5",
+                "else if [Mês] = \"Junho\" then 6",
+                "else if [Mês] = \"Julho\" then 7",
+                "else if [Mês] = \"Agosto\" then 8",
+                "else if [Mês] = \"Setembro\" then 9",
+                "else if [Mês] = \"Outubro\" then 10",
+                "else if [Mês] = \"Novembro\" then 11",
+                "else if [Mês] = \"Dezembro\" then 12",
+                "else null),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Cidade\", \"Unidade\", \"Tipo de Material\", \"Ano\", \"NumberMonth\", \"Mês\", \"Quantidade (resmas)\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Mês\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Toner_recurso_2022_2023",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24b93299-3246-44b3-a323-fa3c714bec6b",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Unidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "41535c90-b0d3-4fe2-aceb-0a18180ab286",
+            "sourceColumn": "Unidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Tipo de Material",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "057cfc58-8b48-4eab-bb4e-5c1556b139f6",
+            "sourceColumn": "Tipo de Material",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ce84de98-2757-4114-8949-75a12f01fa95",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade Toner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2e44c4ff-274b-4f34-8794-8b70b3914831",
+            "sourceColumn": "Quantidade Toner",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "NumberMonth",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f9aa0f1-7507-4845-9ac6-00dd3657e4f1",
+            "sourceColumn": "NumberMonth",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "eb191480-4255-4f84-8c3f-a3b5d0f076a5",
+        "partitions": [
+          {
+            "name": "Toner_recurso_2022_2023",
+            "mode": "import",
+            "queryGroup": "Trated Queries",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\carva\\OneDrive\\Documentos\\GitHub\\PROJETO-UFU-SUSTENTABILIDADE\\dataset\\sustentabilidade_-_toner_2022.csv\"),[Delimiter=\";\", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Cidade\", type text}, {\"Unidade\", type text}, {\"Tipo de Material\", type text}, {\"Ano\", Int64.Type}, {\"Mes\", type text}, {\"Quantidade \", Int64.Type}}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type\",{{\"Mes\", \"Mês\"}, {\"Quantidade \", \"Quantidade\"}}),",
+                "    #\"Appended Query\" = Table.Combine({#\"Renamed Columns\", #\"0_basedados_2023_toner\"}),",
+                "    #\"Filled Down\" = Table.FillDown(#\"Appended Query\",{\"Tipo de Material\"}),",
+                "    #\"Trimmed Text\" = Table.TransformColumns(#\"Filled Down\",{{\"Mês\", Text.Trim, type text}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Trimmed Text\", \"NumberMonth\", each if [Mês] = \"Janeiro\" then 1",
+                "else if [Mês] = \"Fevereiro\" then 2",
+                "else if [Mês] = \"Março\" then 3",
+                "else if [Mês] = \"Abril\" then 4",
+                "else if [Mês] = \"Maio\" then 5",
+                "else if [Mês] = \"Junho\" then 6",
+                "else if [Mês] = \"Julho\" then 7",
+                "else if [Mês] = \"Agosto\" then 8",
+                "else if [Mês] = \"Setembro\" then 9",
+                "else if [Mês] = \"Outubro\" then 10",
+                "else if [Mês] = \"Novembro\" then 11",
+                "else if [Mês] = \"Dezembro\" then 12",
+                "else null),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"Mês\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns\",{\"Cidade\", \"Unidade\", \"Tipo de Material\", \"Ano\", \"NumberMonth\", \"Quantidade\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns\",{{\"Quantidade\", \"Quantidade Toner\"}})",
+                "in",
+                "    #\"Renamed Columns1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TabelaMeses",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "7e96e73d30e34b358858fa87ee5901bc"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "bd29ba21-280d-48c1-bf70-30bc03685919",
+            "sourceColumn": "[Value]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "NomeMês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "209bbee2-5069-4d02-82e2-fdfd46e26428",
+            "sortByColumn": "Value",
+            "sourceColumn": "[NomeMês]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "18eaba5b-4451-47dc-b532-eeb622ecc0cb",
+        "partitions": [
+          {
+            "name": "TabelaMeses",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "",
+                "ADDCOLUMNS(",
+                "    GENERATESERIES(1, 12, 1),            // Gera os números de 1 a 12",
+                "    \"NomeMês\", FORMAT(DATE(2023, [Value], 1), \"MMM\"))  // Retorna o nome do mês)"
+              ],
+              "type": "calculated"
             }
           }
         ]
