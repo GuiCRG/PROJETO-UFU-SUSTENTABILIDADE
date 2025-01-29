@@ -23,6 +23,11 @@ Base de dados disponível no site do Governo Brasileiro: https://dados.gov.br/ho
 
 ## 🌈 | Visualização:
 
+ <img src="https://github.com/GuiCRG/PROJETO-UFU-SUSTENTABILIDADE/blob/main/Prints/2.png" align="center" alt="Python" width="1920px">
+ <img src="https://github.com/GuiCRG/PROJETO-UFU-SUSTENTABILIDADE/blob/main/Prints/5.png" align="center" alt="Python" width="1920px">
+  <img src="https://github.com/GuiCRG/PROJETO-UFU-SUSTENTABILIDADE/blob/main/Prints/3.png" align="center" alt="Python" width="1920px">
+   <img src="https://github.com/GuiCRG/PROJETO-UFU-SUSTENTABILIDADE/blob/main/Prints/4.png" align="center" alt="Python" width="1920px">
+
 
 
 <div align="center">
