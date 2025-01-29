@@ -25,8 +25,2642 @@
         "name": "en-US",
         "linguisticMetadata": {
           "content": {
+            "Entities": {
+              "ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Anos"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated",
+                      "Weight": 0.87
+                    }
+                  }
+                ]
+              },
+              "ano.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Anos",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Cidades"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "cidade.ID_city": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Cidades",
+                    "ConceptualProperty": "ID_City"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ID city": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ID_City": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "city": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "id location": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "id metropolis": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "id municipality": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "location": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "metropolis": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "municipality": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "id town": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "id metropolitan": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.727
+                    }
+                  },
+                  {
+                    "town": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  },
+                  {
+                    "metropolitan": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.714
+                    }
+                  }
+                ]
+              },
+              "cidade.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Cidades",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "NameType": "Name",
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "cidade name": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "copo_recurso_2022_2023": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "copo recurso 2022 2023": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Copo_recurso_2022_2023": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "copo_recurso_2022_2023.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "copo_recurso_2022_2023.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "copo_recurso_2022_2023.number_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "NumberMonth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "number month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumberMonth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "no month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "copo_recurso_2022_2023.pacote_100_un_": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "Pacote (100 un.)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "pacote (100 un.)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "pacote": {
+                      "State": "Generated",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "copo_recurso_2022_2023.tipo_de_copo": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "Tipo de Copo"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo de copo": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Type of material": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "copo_recurso_2022_2023.unidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Copo_recurso_2022_2023",
+                    "ConceptualProperty": "Unidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "unidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "energia_recurso_2022_2023": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "energia recurso 2022 2023": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Energia_recurso_2022_2023": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "energia_recurso_2022_2023.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "energia_recurso_2022_2023.campus": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023",
+                    "ConceptualProperty": "Campus"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "campus": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "property": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "estate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "site": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "energia_recurso_2022_2023.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "energia_recurso_2022_2023.number_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023",
+                    "ConceptualProperty": "NumberMonth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "number month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumberMonth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "no month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "energia_recurso_2022_2023.quantidade_kWh": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Energia_recurso_2022_2023",
+                    "ConceptualProperty": "Quantidade (kWh)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantidade (kWh)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quantidade": {
+                      "State": "Generated",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "papel_recurso_2022_2023": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "papel recurso 2022 2023": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Papel_recurso_2022_2023": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "papel_recurso_2022_2023.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "papel_recurso_2022_2023.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "papel_recurso_2022_2023.number_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "NumberMonth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "number month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumberMonth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "no month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "papel_recurso_2022_2023.quantidade_resmas": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "Quantidade (resmas)"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantidade (resmas)": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quantidade (resma)": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.78
+                    }
+                  },
+                  {
+                    "quantidade": {
+                      "State": "Generated",
+                      "Weight": 0.75
+                    }
+                  }
+                ]
+              },
+              "papel_recurso_2022_2023.tipo_de_material": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "Tipo de Material"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo de material": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "tipo de fabric": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  },
+                  {
+                    "tipo de cloth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  },
+                  {
+                    "tipo de textile": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  },
+                  {
+                    "Type of material": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "papel_recurso_2022_2023.unidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Papel_recurso_2022_2023",
+                    "ConceptualProperty": "Unidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "unidade": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Unit": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "tabela_mese": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TabelaMeses"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tabela mese": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "TabelaMeses": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "tabela_mese.nome_mê": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TabelaMeses",
+                    "ConceptualProperty": "NomeMês"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "nome mê": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NomeMês": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "tabela_mese.value": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "TabelaMeses",
+                    "ConceptualProperty": "Value"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "value": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "assessment": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "worth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "price": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "cost": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "charge": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "rate": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "importance": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "significance": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "usefulness": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  },
+                  {
+                    "consequence": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.466
+                    }
+                  }
+                ]
+              },
+              "toner_recurso_2022_2023": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "toner recurso 2022 2023": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Toner_recurso_2022_2023": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "toner_recurso_2022_2023.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "toner_recurso_2022_2023.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "toner_recurso_2022_2023.number_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "NumberMonth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "number month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumberMonth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "no month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "toner_recurso_2022_2023.quantidade_toner": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "Quantidade Toner"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantidade toner": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "quantidade cleanser": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.5
+                    }
+                  },
+                  {
+                    "quantidade astringent": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  },
+                  {
+                    "quantidade cosmetic": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.485
+                    }
+                  }
+                ]
+              },
+              "toner_recurso_2022_2023.tipo_de_material": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "Tipo de Material"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tipo de material": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "tipo de fabric": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  },
+                  {
+                    "tipo de cloth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  },
+                  {
+                    "tipo de textile": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.458
+                    }
+                  }
+                ]
+              },
+              "toner_recurso_2022_2023.unidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Toner_recurso_2022_2023",
+                    "ConceptualProperty": "Unidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "unidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "água_recurso_2022_2023": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "água recurso 2022 2023": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Água_recurso_2022_2023": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "água_recurso_2022_2023.ano": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023",
+                    "ConceptualProperty": "Ano"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ano": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "água_recurso_2022_2023.campus_unidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023",
+                    "ConceptualProperty": "Campus/Unidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "campus/unidade": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "campus unidade": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "Unit": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "água_recurso_2022_2023.cidade": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023",
+                    "ConceptualProperty": "Cidade"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "cidade": {
+                      "State": "Generated"
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "água_recurso_2022_2023.number_month": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023",
+                    "ConceptualProperty": "NumberMonth"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "number month": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "NumberMonth": {
+                      "State": "Generated",
+                      "Type": "Noun",
+                      "Weight": 0.99
+                    }
+                  },
+                  {
+                    "number mth": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.75
+                    }
+                  },
+                  {
+                    "no month": {
+                      "Source": {
+                        "Agent": "Thesaurus"
+                      },
+                      "State": "Suggested",
+                      "Type": "Noun",
+                      "Weight": 0.582
+                    }
+                  }
+                ],
+                "Visibility": {
+                  "Value": "Hidden"
+                }
+              },
+              "água_recurso_2022_2023.quantidade_em_m": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Água_recurso_2022_2023",
+                    "ConceptualProperty": "Quantidade em m³"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantidade em m³": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              }
+            },
             "Language": "en-US",
-            "Version": "1.0.0"
+            "Relationships": {
+              "ano_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Anos"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano.ano"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "ano.ano": {
+                    "Target": {
+                      "Entity": "ano.ano"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "cidade_has_ID_city": {
+                "Binding": {
+                  "ConceptualEntity": "Cidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade.ID_city"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_ID_cities",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "cidade.ID_city": {
+                    "Target": {
+                      "Entity": "cidade.ID_city"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "cidade_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Cidades"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade.cidade"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "ID": "cidades_are_names_IDs_of_cidades",
+                    "Name": {
+                      "Name": {
+                        "Role": "cidade.cidade"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "cidade.cidade": {
+                    "Target": {
+                      "Entity": "cidade.cidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "cidade_in_ID_city": {
+                "Binding": {
+                  "ConceptualEntity": "Cidades"
+                },
+                "Phrasings": [
+                  {
+                    "ID": "cidades_are_in_ID_cities",
+                    "Preposition": {
+                      "Object": {
+                        "Role": "cidade.ID_city"
+                      },
+                      "Prepositions": [
+                        {
+                          "in": {
+                            "State": "Generated"
+                          }
+                        }
+                      ],
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "cidade.ID_city": {
+                    "Target": {
+                      "Entity": "cidade.ID_city"
+                    }
+                  }
+                },
+                "SemanticSlots": {
+                  "Where": {
+                    "Role": "cidade.ID_city"
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_copo_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_copo_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_pacote_100_un_": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023.pacote_100_un_"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_pacote_100_un_",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  },
+                  "copo_recurso_2022_2023.pacote_100_un_": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023.pacote_100_un_"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_tabela_mese": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_tabela_meses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_copo_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  },
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_tipo_de_copo": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023.tipo_de_copo"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_tipo_de_copos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  },
+                  "copo_recurso_2022_2023.tipo_de_copo": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023.tipo_de_copo"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "copo_recurso_2022_2023_has_unidade": {
+                "Binding": {
+                  "ConceptualEntity": "Copo_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "copo_recurso_2022_2023.unidade"
+                      },
+                      "Subject": {
+                        "Role": "copo_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "copo_recurso_2022_2023_have_unidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "copo_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023"
+                    }
+                  },
+                  "copo_recurso_2022_2023.unidade": {
+                    "Target": {
+                      "Entity": "copo_recurso_2022_2023.unidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "energia_recurso_2022_2023_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Energia_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano"
+                      },
+                      "Subject": {
+                        "Role": "energia_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "energia_recurso_2022_2023_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "energia_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_energia_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "energia_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "energia_recurso_2022_2023_has_campus": {
+                "Binding": {
+                  "ConceptualEntity": "Energia_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "energia_recurso_2022_2023.campus"
+                      },
+                      "Subject": {
+                        "Role": "energia_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "energia_recurso_2022_2023_have_campuses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "energia_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023"
+                    }
+                  },
+                  "energia_recurso_2022_2023.campus": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023.campus"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "energia_recurso_2022_2023_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Energia_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade"
+                      },
+                      "Subject": {
+                        "Role": "energia_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "energia_recurso_2022_2023_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "energia_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_energia_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "energia_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "energia_recurso_2022_2023_has_quantidade_kWh": {
+                "Binding": {
+                  "ConceptualEntity": "Energia_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "energia_recurso_2022_2023.quantidade_kWh"
+                      },
+                      "Subject": {
+                        "Role": "energia_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "energia_recurso_2022_2023_have_quantidade_kWh",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "energia_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023"
+                    }
+                  },
+                  "energia_recurso_2022_2023.quantidade_kWh": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023.quantidade_kWh"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "energia_recurso_2022_2023_has_tabela_mese": {
+                "Binding": {
+                  "ConceptualEntity": "Energia_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese"
+                      },
+                      "Subject": {
+                        "Role": "energia_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "energia_recurso_2022_2023_have_tabela_meses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "energia_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_energia_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "energia_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "energia_recurso_2022_2023"
+                    }
+                  },
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_papel_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_papel_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_quantidade_resmas": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023.quantidade_resmas"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_quantidade_resmas",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  },
+                  "papel_recurso_2022_2023.quantidade_resmas": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023.quantidade_resmas"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_tabela_mese": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_tabela_meses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_papel_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  },
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_tipo_de_material": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023.tipo_de_material"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_tipo_de_materials",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  },
+                  "papel_recurso_2022_2023.tipo_de_material": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023.tipo_de_material"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "papel_recurso_2022_2023_has_unidade": {
+                "Binding": {
+                  "ConceptualEntity": "Papel_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "papel_recurso_2022_2023.unidade"
+                      },
+                      "Subject": {
+                        "Role": "papel_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "papel_recurso_2022_2023_have_unidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "papel_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023"
+                    }
+                  },
+                  "papel_recurso_2022_2023.unidade": {
+                    "Target": {
+                      "Entity": "papel_recurso_2022_2023.unidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "tabela_mese_has_nome_mê": {
+                "Binding": {
+                  "ConceptualEntity": "TabelaMeses"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese.nome_mê"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_nome_mê",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  },
+                  "tabela_mese.nome_mê": {
+                    "Target": {
+                      "Entity": "tabela_mese.nome_mê"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "tabela_mese_has_value": {
+                "Binding": {
+                  "ConceptualEntity": "TabelaMeses"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese.value"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_values",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  },
+                  "tabela_mese.value": {
+                    "Target": {
+                      "Entity": "tabela_mese.value"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_toner_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_toner_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_quantidade_toner": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023.quantidade_toner"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_quantidade_toners",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  },
+                  "toner_recurso_2022_2023.quantidade_toner": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023.quantidade_toner"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_tabela_mese": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_tabela_meses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_toner_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  },
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_tipo_de_material": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023.tipo_de_material"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_tipo_de_materials",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  },
+                  "toner_recurso_2022_2023.tipo_de_material": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023.tipo_de_material"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "toner_recurso_2022_2023_has_unidade": {
+                "Binding": {
+                  "ConceptualEntity": "Toner_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "toner_recurso_2022_2023.unidade"
+                      },
+                      "Subject": {
+                        "Role": "toner_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "toner_recurso_2022_2023_have_unidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "toner_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023"
+                    }
+                  },
+                  "toner_recurso_2022_2023.unidade": {
+                    "Target": {
+                      "Entity": "toner_recurso_2022_2023.unidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "água_recurso_2022_2023_has_ano": {
+                "Binding": {
+                  "ConceptualEntity": "Água_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "ano"
+                      },
+                      "Subject": {
+                        "Role": "água_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "água_recurso_2022_2023_have_anos",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "água_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "ano"
+                      }
+                    },
+                    "ID": "anos_have_água_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "ano": {
+                    "Target": {
+                      "Entity": "ano"
+                    }
+                  },
+                  "água_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "água_recurso_2022_2023_has_campus_unidade": {
+                "Binding": {
+                  "ConceptualEntity": "Água_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "água_recurso_2022_2023.campus_unidade"
+                      },
+                      "Subject": {
+                        "Role": "água_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "água_recurso_2022_2023_have_campus_unidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "água_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023"
+                    }
+                  },
+                  "água_recurso_2022_2023.campus_unidade": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023.campus_unidade"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "água_recurso_2022_2023_has_cidade": {
+                "Binding": {
+                  "ConceptualEntity": "Água_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "cidade"
+                      },
+                      "Subject": {
+                        "Role": "água_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "água_recurso_2022_2023_have_cidades",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "água_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "cidade"
+                      }
+                    },
+                    "ID": "cidades_have_água_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "cidade": {
+                    "Target": {
+                      "Entity": "cidade"
+                    }
+                  },
+                  "água_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "água_recurso_2022_2023_has_quantidade_em_m": {
+                "Binding": {
+                  "ConceptualEntity": "Água_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "água_recurso_2022_2023.quantidade_em_m"
+                      },
+                      "Subject": {
+                        "Role": "água_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "água_recurso_2022_2023_have_quantidade_em_m",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "água_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023"
+                    }
+                  },
+                  "água_recurso_2022_2023.quantidade_em_m": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023.quantidade_em_m"
+                    }
+                  }
+                },
+                "State": "Generated"
+              },
+              "água_recurso_2022_2023_has_tabela_mese": {
+                "Binding": {
+                  "ConceptualEntity": "Água_recurso_2022_2023"
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "tabela_mese"
+                      },
+                      "Subject": {
+                        "Role": "água_recurso_2022_2023"
+                      }
+                    },
+                    "ID": "água_recurso_2022_2023_have_tabela_meses",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Object": {
+                        "Role": "água_recurso_2022_2023"
+                      },
+                      "Subject": {
+                        "Role": "tabela_mese"
+                      }
+                    },
+                    "ID": "tabela_meses_have_água_recurso_2022_2023",
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ],
+                "Roles": {
+                  "tabela_mese": {
+                    "Target": {
+                      "Entity": "tabela_mese"
+                    }
+                  },
+                  "água_recurso_2022_2023": {
+                    "Target": {
+                      "Entity": "água_recurso_2022_2023"
+                    }
+                  }
+                },
+                "State": "Generated"
+              }
+            },
+            "Version": "3.5.0"
           },
           "contentType": "json"
         }
