@@ -1,7 +1,7 @@
 # ♻️ | Recursos consumidos entre 2022 e 2023
 
 Sustentabilidade é um assunto delicado e complexo nos dias atuais. Com o aumento da população e seu crescente descarte e uso excessivos de recursos estão acarretando em um problema imensurável. 
-Esse dashboard consiste na visualização de recursos como a água, energia, copos de plástico, toner para impressoras e pacotes de papel. 
+Esse dashboard consiste na visualização de recursos como a água, energia, copos de plástico, toner para impressoras e pacotes de papel da Universidade Federal de Uberlândia(UFU) 
 Base de dados disponível no site do Governo Brasileiro: https://dados.gov.br/home
 
 
