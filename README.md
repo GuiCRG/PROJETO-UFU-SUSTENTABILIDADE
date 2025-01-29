@@ -7,7 +7,7 @@ Base de dados disponível no site do Governo Brasileiro: https://dados.gov.br/ho
 
 
 # ✨| Insights
-- Os campus da cidade de Uberlândia teve um consumo de 385k m³ de água liderada pelo campus Santa Mônica se distanciando de Monte Carmelo com um total de 22k m³ consumidos.
+- Os campus da cidade de Uberlândia teve um consumo de 385k m³ de água liderada pelo campus Santa Mônica se distanciando da cidade de Monte Carmelo com um total de 22k m³ consumidos.
 - Nos dois anos o mês de Novembro teve um aumento no consumo de todos os recursos apresentados.
 - Os pacotes de papel com 100 un. reciclados não são mais utilizados que os não reciclados.
 - A cidade de Patos de Minas é a cidade com menos recursos consumidos
